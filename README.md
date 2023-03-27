@@ -1,4 +1,4 @@
-###Suffering to get better
+### Suffering to get better
 
 [for those who want to scold me](https://leetcode.com/xqtwk/)
 
