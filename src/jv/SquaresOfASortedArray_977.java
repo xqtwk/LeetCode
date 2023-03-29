@@ -11,6 +11,7 @@ public class SquaresOfASortedArray_977 {
         if (first < 0) {
             Arrays.sort(nums);
         }
+        System.gc();
         return nums;
     }
 }
