@@ -30,10 +30,11 @@ public class ReducingDishes_1402 {
         }
         return result;
     }
+
     public int checkSum(ArrayList<Integer> list) {
         int sum = 0;
         for (int i = 0; i < list.size(); i++) {
-            sum+= list.get(i) * (i+1);
+            sum += list.get(i) * (i + 1);
         }
         return sum;
     }
