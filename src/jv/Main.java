@@ -2,11 +2,8 @@ package jv;
 
 public class Main {
     public static void main(String[] args) {
-        SuccessfulPairsOfSpellsAndPotions_2300 successfulPairsOfSpellsAndPotions2300 = new SuccessfulPairsOfSpellsAndPotions_2300();
-        int[] spells = {3,1,2};
-        int[] potions = {8,5,8};
-        for (int key: successfulPairsOfSpellsAndPotions2300.successfulPairs(spells,potions,16)) {
-            System.out.println(key);
-        }
+        int[] nums = {3,5,3,4};
+        BoatsToSavePeople_881 boatsToSavePeople881 = new BoatsToSavePeople_881();
+        System.out.println(boatsToSavePeople881.numRescueBoats(nums,5));
     }
 }
