@@ -1,34 +1,35 @@
 package jv;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
+import java.util.HashMap;
 
 public class PermutationInString_567 {
     public boolean checkInclusion(String s1, String s2) {
-        char[] chars = s1.toCharArray();
-        ArrayList<String> array = new ArrayList<>();
-        int n = chars.length;
+        if (s1.length() > s2.length()) {
+            return false;
+        }
 
-        for (int i = 0; i < Math.pow(2, n); i++) {
-            StringBuilder sb = new StringBuilder();
-            for (int j = 0; j < n; j++) {
-                int bit = (i / (int) Math.pow(2, j)) % 2;
-                if (bit == 1) {
-                    sb.append(chars[j]);
+        HashMap<Character, Integer> subString = new HashMap<>();
+        for (char c : s1.toCharArray()) {
+            subString.put(c, subString.getOrDefault(c, 0) + 1);
+        }
+
+        HashMap<Character, Integer> string = new HashMap<>();
+        for (int i = 0; i < s2.length(); i++) {
+            char c = s2.charAt(i);
+            string.put(c, string.getOrDefault(c, 0) + 1);
+            if (i >= s1.length()) {
+                char prev = s2.charAt(i - s1.length());
+                if (string.get(prev) == 1) {
+                    string.remove(prev);
+                } else {
+                    string.put(prev, string.get(prev) - 1);
                 }
             }
-            array.add(sb.toString());
-        }
-        for (String key: array) {
-            if (s2.contains(key)) {
+            if (i >= s1.length() - 1 && subString.equals(string)) {
                 return true;
             }
         }
+
         return false;
     }
 }
