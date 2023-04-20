@@ -9,11 +9,15 @@ public class Matrix01_542 {
         int y = matrix.length;
         int x = matrix[0].length;
         int[][] distance = new int[y][x];
-
         for (int i = 0; i < y; i++) {
             Arrays.fill(distance[i], 10000);
         }
-
+        for (int[] key : distance) {
+            for (int k : key) {
+                System.out.print(k + ", ");
+            }
+            System.out.println();
+        }
         for (int i = 0; i < y; i++) {
             for (int j = 0; j < x; j++) {
                 if (matrix[i][j] == 0) {
