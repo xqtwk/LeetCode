@@ -4,33 +4,26 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 class Permutations_46 {
-    public static void main(String[] args) {
-        Permutations_46 p = new Permutations_46();
-        int[] nums = {1,2,3,4};
-        System.out.println(p.permute(nums));
-    }
     public List<List<Integer>> permute(int[] nums) {
-        int count = 0;
-        List<Integer> numbers = Arrays.stream(nums).boxed().collect(Collectors.toList());
-        List<List<Integer>> result = new ArrayList<>();
-        for(int i = 0; i < numbers.size(); i++) {
-            List<Integer> newNumbers = new ArrayList<>();
-
-            if (i < numbers.size()-1) {
-                for(int j = i+1; j < numbers.size(); j++) {
-
-                }
-            }
+        List<Integer> numbers = new ArrayList<>();
+        for (int num : nums) {
+            numbers.add(num);
         }
-        /*for(int i = 0; i < factorial(numbers.size()); i++) {
-            List<Integer> newNumbers = new ArrayList<>();
-        }*/
+        List<List<Integer>> result = new ArrayList<>();
+        permutations(numbers, result, 0);
         return result;
     }
-    public int factorial(int n) {
-        if (n <= 2) {
-            return n;
+
+    private void permutations(List<Integer> numbers, List<List<Integer>> result, int index) {
+        if (index == numbers.size()) {
+            result.add(new ArrayList<>(numbers));
+            return;
         }
-        return n * factorial(n - 1);
+        for (int i = index; i < numbers.size(); i++) {
+            Collections.swap(numbers, index, i);
+            permutations(numbers, result, index + 1);
+            Collections.swap(numbers, index, i);
+        }
+
     }
 }

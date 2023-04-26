@@ -2,9 +2,9 @@ package jv;
 
 public class Main {
     public static void main(String[] args) {
-        RottingOranges_994 rottingOranges994 = new RottingOranges_994();
-        int nums[][] = {{2, 1, 1}, {1, 1, 0}, {0, 1, 1}};
+        Permutations_46 permutations46 = new Permutations_46();
+        int nums[] = {1,2,3};
 
-        System.out.println(rottingOranges994.orangesRotting(nums));
+        System.out.println(permutations46.permute(nums));
     }
 }
