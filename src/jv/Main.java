@@ -2,10 +2,9 @@ package jv;
 
 public class Main {
     public static void main(String[] args) {
-        MergeSortedArray_88 mergeSortedArray88 = new MergeSortedArray_88();
-        int nums1[] = {1,2,3,0,0,0};
-        int nums2[] = {2,5,6};
+        BestTimeToBuyAndSellStock_121 bestTimeToBuyAndSellStock121 = new BestTimeToBuyAndSellStock_121();
+        int nums1[] = {7,1,5,3,6,4};
 
-        mergeSortedArray88.merge(nums1,3,nums2,3);
+        System.out.println(bestTimeToBuyAndSellStock121.maxProfit(nums1));
     }
 }
