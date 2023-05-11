@@ -7,7 +7,6 @@ public class ImplementQueueUsingStacks_232 {
 
 }
 class MyQueue {
-    private int front;
     private Stack<Integer> stackOne = new Stack<>();
     private Stack<Integer> stackTwo = new Stack<>();
 
