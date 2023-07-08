@@ -1,7 +1,6 @@
 package jv;
 
 public class Sqrtx_69 {
-    // f
     public int mySqrt(int x) {
         if (x < 2) return x;
         long start = 1;
