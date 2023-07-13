@@ -1,4 +1,6 @@
-public class WordSearch {
+package jv;
+
+public class WordSearch_79 {
     public boolean exist(char[][] board, String word) {
         for (int r = 0; r < board.length; r++) {
             for (int c = 0; c < board[0].length; c++) {

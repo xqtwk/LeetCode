@@ -1,3 +1,5 @@
+package jv;
+
 public class InsertIntoABinarySearchTree_701 {
     public TreeNode insertIntoBST(TreeNode root, int val) {
         if (root == null) {
