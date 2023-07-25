@@ -1,6 +1,6 @@
 package jv;
 
-public class LengthOfLastWord {
+public class LengthOfLastWord_58 {
     public int lengthOfLastWord(String s) {
         int length = 0;
         char[] chars = s.toCharArray();
