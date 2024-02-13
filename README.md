@@ -1,4 +1,4 @@
-### Suffering to get better
+### Java
 
 [profile](https://leetcode.com/xqtwk/)
 
