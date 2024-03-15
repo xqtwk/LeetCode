@@ -15,7 +15,6 @@ public class FirstMissingPositive {
             return 1;
         }
 
-
         while (firstPositiveIndex < nums.length && nums[firstPositiveIndex] <= 0) {
             firstPositiveIndex++;
         }
